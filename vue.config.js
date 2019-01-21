@@ -19,10 +19,9 @@ module.exports = {
       .set('mixins', resolve('mixins'))
       .set('store', resolve('store'))
       .end()
+      // 扩展名省略
       .extensions
       .add('.scss')
-    // 配置省略扩展名
-    config.resolve.extensions
 
   },
   css: {

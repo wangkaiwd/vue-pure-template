@@ -1,9 +1,15 @@
 import Vue from 'vue'
+import user from './modules/user'
+import goods from './modules/goods'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  modules: {
+    user,
+    goods
+  },
   state: {
     count: 0
   },
@@ -15,10 +21,12 @@ export default new Vuex.Store({
     },
     minus (state) {
       state.count--
-    },
-    asyncPlus (state) {
-      setTimeout(() => state.count++, 1000)
     }
   },
-  actions: {}
+  //在actions中定义的异步函数可以被devtools正常追踪
+  actions: {
+    asyncPlus ({ commit }) {
+      commit('plus')
+    }
+  }
 })

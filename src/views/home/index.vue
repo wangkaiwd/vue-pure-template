@@ -1,30 +1,35 @@
 <template>
   <div class="home">
-    <van-button type="default">默认按钮</van-button>
-    <van-button type="primary">主要按钮</van-button>
-    <van-button type="warning">
-      警告按钮
-    </van-button>
-    <van-button
-      type="danger"
-      @click="onClick"
-    >危险按钮
-    </van-button>
+    <notice-bar>store中的状态：{{count}}</notice-bar>
+    <van-button type="primary" @click="plus">+1</van-button>
+    <van-button type="primary" @click="minus">-1</van-button>
   </div>
 </template>
 
 <script>
-  import { Button } from 'vant'
+  import { Button, NoticeBar } from 'vant'
+  import store from 'store'
 
   export default {
     name: 'Home',
-    components: { VanButton: Button },
+    components: { VanButton: Button, NoticeBar },
     data () {
       return {}
+    },
+    computed: {
+      count () {
+        return store.state.count
+      }
     },
     methods: {
       onClick () {
         console.log('click')
+      },
+      plus () {
+        store.commit('plus')
+      },
+      minus () {
+        store.commit('minus')
       }
     }
   }

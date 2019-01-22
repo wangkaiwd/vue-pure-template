@@ -8,7 +8,6 @@
 
 <script>
   import { Button, NoticeBar } from 'vant'
-  import store from 'store'
 
   export default {
     name: 'Home',
@@ -18,18 +17,15 @@
     },
     computed: {
       count () {
-        return store.state.count
+        return this.$store.state.count
       }
     },
     methods: {
-      onClick () {
-        console.log('click')
-      },
       plus () {
-        store.commit('plus')
+        return this.$store.commit('plus')
       },
       minus () {
-        store.commit('minus')
+        return this.$store.commit('minus')
       }
     }
   }

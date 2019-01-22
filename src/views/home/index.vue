@@ -3,6 +3,7 @@
     <notice-bar>store中的状态：{{count}}</notice-bar>
     <van-button type="primary" @click="plus">+1</van-button>
     <van-button type="primary" @click="minus">-1</van-button>
+    <van-button type="primary" @click="asyncPlus">+1(async)</van-button>
   </div>
 </template>
 
@@ -20,7 +21,7 @@
       ...mapState(['count'])
     },
     methods: {
-      ...mapMutations(['plus', 'minus'])
+      ...mapMutations(['plus', 'minus', 'asyncPlus'])
     }
   }
 </script>

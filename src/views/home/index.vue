@@ -8,6 +8,7 @@
 
 <script>
   import { Button, NoticeBar } from 'vant'
+  import { mapState } from 'vuex'
 
   export default {
     name: 'Home',
@@ -16,9 +17,7 @@
       return {}
     },
     computed: {
-      count () {
-        return this.$store.state.count
-      }
+      ...mapState(['count'])
     },
     methods: {
       plus () {

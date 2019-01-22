@@ -8,7 +8,7 @@
 
 <script>
   import { Button, NoticeBar } from 'vant'
-  import { mapState } from 'vuex'
+  import { mapState, mapMutations } from 'vuex'
 
   export default {
     name: 'Home',
@@ -20,12 +20,7 @@
       ...mapState(['count'])
     },
     methods: {
-      plus () {
-        return this.$store.commit('plus')
-      },
-      minus () {
-        return this.$store.commit('minus')
-      }
+      ...mapMutations(['plus', 'minus'])
     }
   }
 </script>

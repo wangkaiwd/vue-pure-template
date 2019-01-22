@@ -1,3 +1,6 @@
+/**
+ * 通过屏幕宽度设置html元素的字体大小
+ */
 const setRem = () => {
   const width = document.documentElement.offsetWidth
   const html = document.documentElement

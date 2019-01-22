@@ -4,6 +4,7 @@ module.exports = {
   // 关闭eslint
   lintOnSave: false,
   chainWebpack: config => {
+    // 这里的具体配置都可以在文档的链接中找到
     // 配置别名
     config.resolve
       .alias

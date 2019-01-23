@@ -1,15 +1,21 @@
 <template>
   <div class="home">
     <notice-bar>store中的状态：{{count}}</notice-bar>
-    <van-button type="primary" @click="plus">+1</van-button>
-    <van-button type="primary" @click="minus">-1</van-button>
-    <van-button type="primary" @click="asyncPlus">+1(async)</van-button>
-    <van-button type="danger">
-      {{name}}
-    </van-button>
-    <van-button type="danger">
-      {{goodsName}}
-    </van-button>
+    <!--<van-button type="primary" @click="plus">+1</van-button>-->
+    <!--<van-button type="primary" @click="minus">-1</van-button>-->
+    <!--<van-button type="primary" @click="asyncPlus">+1(async)</van-button>-->
+    <div>
+      <van-button type="danger">
+        {{name}}
+      </van-button>
+    </div>
+    <div>
+      <van-button type="danger">
+        {{goodsName}}
+      </van-button>
+    </div>
+    <van-button type="primary" @click="userChangeName">userChangeName</van-button>
+    <!--<van-button type="primary" @click="goodsChangeName">goodsChangeName</van-button>-->
   </div>
 </template>
 
@@ -31,8 +37,13 @@
       ...mapState('goods', { goodsName: 'name' })
     },
     methods: {
-      ...mapMutations(['plus', 'minus']),
-      ...mapActions(['asyncPlus'])
+      // ...mapMutations(['plus', 'minus']),
+      // ...mapActions(['asyncPlus']),
+      ...mapMutations('user', ['userChangeName']),
+      // ...mapMutations('goods', ['goodsChangeName'])
+      // userChangeName () {
+      //   this['user/userChangeName']()
+      // }
     }
   }
 </script>

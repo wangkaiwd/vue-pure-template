@@ -6,7 +6,7 @@ const user = {
   //同步更改state中的状态
   mutations: {
     changeName (state) {
-      state.name = 'user-changeName'
+      state.name = 'userChangeName'
     }
   },
   //异步更改state中的状态

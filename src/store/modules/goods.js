@@ -5,7 +5,7 @@ const goods = {
   },
   mutations: {
     changeName (state) {
-      state.name = 'goods-changeName'
+      state.name = 'goodsChangeName'
     }
   },
   actions: {}

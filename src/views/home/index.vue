@@ -23,11 +23,14 @@
   import { Button, NoticeBar } from 'vant'
   import { mapState, mapMutations, mapActions } from 'vuex'
 
+  console.log(process.env)
   export default {
     name: 'Home',
     components: { VanButton: Button, NoticeBar },
     data () {
       return {}
+    },
+    mounted () {
     },
     computed: {
       ...mapState(['count']),

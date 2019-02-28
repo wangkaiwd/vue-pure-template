@@ -1,6 +1,6 @@
 {
-  "name": "vant-mall",
-  "short_name": "vant-mall",
+  "name": "vue-demo",
+  "short_name": "vue-demo",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

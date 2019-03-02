@@ -3,6 +3,18 @@ import './plugins/vuetify';
 import App from './App.vue';
 import router from './router';
 import store from 'store';
+// import BaseLoading from 'components/loading';
+// import RouterErr from './router/routerErr';
+
+// const App = () => (
+//   {
+//     component: import('./App'),
+//     error: RouterErr,
+//     loading: BaseLoading,
+//     delay: 200,
+//     timeout: 3000
+//   }
+// );
 // import 'utils/rem';
 import 'styles/reset';
 import 'styles/base';

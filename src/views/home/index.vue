@@ -11,9 +11,9 @@
           :key="item.title"
           @click=""
         >
-          <!-- <v-list-tile-action>
-             <v-icon>{{ item.icon }}</v-icon>
-           </v-list-tile-action>-->
+          <v-list-tile-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-tile-action>
 
           <v-list-tile-content>
             <v-list-tile-title>
@@ -35,10 +35,10 @@
     data () {
       return {
         items: [
-          { title: '首页', link: '/home' },
-          { title: '个人中心', link: '/personal' },
-          { title: '商品', link: '/goods' },
-          { title: '购物车', link: '/shopCart' }
+          { title: '首页', link: '/home', icon: 'dashboard' },
+          { title: '个人中心', link: '/personal', icon: 'account_box' },
+          { title: '商品', link: '/goods', icon: 'gavel' },
+          { title: '购物车', link: '/shopCart', icon: 'shopping_cart' }
         ]
       };
     }

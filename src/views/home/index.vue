@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     home
+    <router-link to="/personal">to personal</router-link>
   </div>
 </template>
 

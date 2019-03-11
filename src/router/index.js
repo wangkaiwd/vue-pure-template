@@ -1,18 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-// import BaseLoading from 'components/loading';
-// import RouterErr from './routerErr';
 
 Vue.use(Router);
-// const getComponent = dir => () => (
-//   {
-//     component: import(`views/${dir}`),
-//     error: RouterErr,
-//     loading: BaseLoading,
-//     delay: 200,
-//     timeout: 3000
-//   }
-// );
 const getComponent = dir => () => import(`views/${dir}`);
 export default new Router({
   routes: [
@@ -21,24 +10,28 @@ export default new Router({
       redirect: 'home'
     },
     {
-      path: '/home',
+      path: '/home/index',
       name: 'home',
-      component: getComponent('home')
+      component: getComponent('home'),
+      meta: { title: '首页' }
     },
     {
       path: '/goods',
       name: 'goods',
-      component: getComponent('goods')
+      component: getComponent('goods'),
+      meta: { title: '商品' }
     },
     {
       path: '/personal',
       name: 'personal',
-      component: getComponent('personal')
+      component: getComponent('personal'),
+      meta: { title: '个人中心' }
     },
     {
       path: '/shopCart',
       name: 'shopCart',
-      component: getComponent('shopCart')
+      component: getComponent('shopCart'),
+      meta: { title: '购物车' }
     },
   ]
 });

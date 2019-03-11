@@ -1,6 +1,10 @@
 <template>
   <el-col class="left-nav" :span="4">
-    <el-menu class="left-nav-menu" :router="true">
+    <el-menu
+      :default-active="defaultActive"
+      class="left-nav-menu"
+      :router="true"
+    >
       <side-bar></side-bar>
     </el-menu>
   </el-col>
@@ -11,7 +15,17 @@
 
   export default {
     name: 'LeftNav',
-    components: { SideBar }
+    components: { SideBar },
+    data () {
+      return {
+        defaultActive: '/home/index'
+      };
+    },
+    watch: {
+      '$route' (newVal) {
+        this.defaultActive = newVal.path;
+      }
+    },
   };
 </script>
 

@@ -1,8 +1,8 @@
 const menuConfig = [
   {
-    title: '首页', index: '/', icon: '',
+    title: '首页', index: '/home', icon: '',
     children: [
-      { title: '首页1', index: '/home', icon: '' }
+      { title: '首页1', index: '/home/index', icon: '' }
     ]
   },
   { title: '个人中心', index: '/personal', icon: '' },

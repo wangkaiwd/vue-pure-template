@@ -1,6 +1,6 @@
 {
-  "name": "vue-demo",
-  "short_name": "vue-demo",
+  "name": "hello-world",
+  "short_name": "hello-world",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

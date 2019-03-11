@@ -1,15 +1,18 @@
 <template>
-  <v-app>
-    <v-content>
+  <el-row type="flex">
+    <left-nav></left-nav>
+    <el-col>
       <router-view></router-view>
-    </v-content>
-  </v-app>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
+  import LeftNav from 'layouts/leftNav';
+
   export default {
     name: 'App',
-    components: {},
+    components: { LeftNav },
     data () {
       return {
         //

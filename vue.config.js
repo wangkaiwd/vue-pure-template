@@ -3,7 +3,7 @@ const resolve = dir => path.resolve(__dirname, `src/${dir}/`);
 module.exports = {
   // 关闭eslint
   lintOnSave: false,
-  publicPath: './',
+  publicPath: '/vue-cli3.0-template/',
   chainWebpack: config => {
     // 这里是对环境的配置，不同环境对应不同的BASE_API，以便axios的请求地址不同
     // 这里用到了webpack.DefinePlugin

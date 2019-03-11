@@ -34,6 +34,9 @@
 
 <style lang="scss" scoped>
   .side-bar-wrapper {
-
+    .el-menu-item {
+      height: 40px;
+      line-height: 40px;
+    }
   }
 </style>

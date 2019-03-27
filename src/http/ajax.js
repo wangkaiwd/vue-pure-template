@@ -18,5 +18,4 @@ const ajax = (url, method = 'post') => (params) => {
     }
   );
 };
-
 export default ajax;

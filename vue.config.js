@@ -8,7 +8,6 @@ module.exports = {
     // 这里是对环境的配置，不同环境对应不同的BASE_API，以便axios的请求地址不同
     // 这里用到了webpack.DefinePlugin
     config.plugin('define').tap(args => {
-      console.log('args', args);
       const argv = process.argv;
       const mode = argv[argv.indexOf('--project-mode') + 1];
       // 这里必须要使用`"string"`,字符串必须要单双引号俩层嵌套，否则使用到process.env的时候会报错

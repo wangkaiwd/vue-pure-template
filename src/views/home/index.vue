@@ -6,11 +6,19 @@
 </template>
 
 <script>
+  import { fetchGoods } from 'api';
 
   export default {
     name: 'Home',
     data () {
       return {};
+    },
+    mounted () {
+      fetchGoods().then(
+        res => {
+          console.log('res', res);
+        }
+      );
     },
     methods: {}
   };

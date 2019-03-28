@@ -1,6 +1,19 @@
 const path = require('path');
 const resolve = dir => path.resolve(__dirname, `src/${dir}/`);
 module.exports = {
+  // 前端配置
+  devServer: {
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://localhost:1234',
+    //     ws: true,
+    //     changeOrigin: true
+    //   }
+    // }
+    // 只能将本地前端代码对应的服务地址进行代理
+    // 设置代理时不用设置axios的baseURL的协议域名和端口号,否则会出错
+    proxy: 'http://localhost:1234'
+  },
   // 关闭eslint
   lintOnSave: false,
   publicPath: process.env.NODE_ENV === 'development' ? '.' : '/vue-cli3.0-template/',
@@ -14,7 +27,6 @@ module.exports = {
       // 文档：这个插件直接执行文本替换，给定的值必须包含字符串本身内的实际引用。通常，有俩种方式
       // 来达到这个效果，使用'"production"',或者使用JSON.stringify('production')
       args[0]['process.env'].MODE = `"${mode}"`;
-      // args[0]['process.env'].BASE_API = JSON.stringify('http://editor-api.eloco.cn')
       return args;
     });
     // 这里的具体配置都可以在文档的链接中找到

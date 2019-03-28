@@ -10,6 +10,7 @@
     "build:test": "vue-cli-service build --report --project-mode test"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "element-ui": "^2.6.1",
     "qs": "^6.7.0",
     "register-service-worker": "^1.6.2",

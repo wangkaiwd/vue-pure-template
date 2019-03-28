@@ -19,4 +19,24 @@ const ajax = (url, method = 'post') => (params) => {
     }
   );
 };
+
+// 常用请求：
+// 1.get:列表  2.post_json:新增/保存  3.post_form: 字段比较简单的保存
+// 4.export: 表格导出 5. upload:文件上传
+const http = {
+  get () {
+
+  },
+  // json/form
+  post () {
+
+  },
+  // formData
+  export () {
+
+  },
+  upload () {
+
+  }
+};
 export default ajax;

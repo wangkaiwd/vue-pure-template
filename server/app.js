@@ -3,7 +3,6 @@ const app = express();
 
 const PORT = 1234;
 app.post('/goods', (req, res) => {
-  console.log('url', req.url);
   res.json({
     code: 0,
     list: [{ message: 'test' }]

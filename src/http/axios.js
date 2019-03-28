@@ -1,5 +1,6 @@
 import axios from 'axios';
 import baseURL from './env';
+import vm from '@/main';
 
 const axiosInstance = axios.create({
   baseURL,
@@ -8,10 +9,11 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   config => {
-    const { method } = config;
+    // const { method } = config;
     return config;
   },
   err => {
+    vm.$message.error('请求出错！');
     console.log('请求出错');
     return Promise.reject(err);
   }
@@ -21,7 +23,7 @@ axiosInstance.interceptors.response.use(
   res => {
     const { data, status } = res;
     const tipError = () => {
-      alert(data.msg || '服务器异常');
+      vm.$message.error(data.msg || '服务器异常');
       return Promise.reject();
     };
     if (status === 200) { // 服务器响应成功
@@ -34,6 +36,7 @@ axiosInstance.interceptors.response.use(
   },
   err => {
     console.log(`响应出错: ${err.message}`);
+    vm.$message.error('服务器响应出错！');
     return Promise.reject(err);
   }
 );

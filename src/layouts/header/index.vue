@@ -1,17 +1,17 @@
 <template>
-  <div class="base-footer">
+  <div class="base-header">
     index
   </div>
 </template>
 
 <script>
   export default {
-    name: 'BaseFooter'
+    name: 'BaseHooter'
   }
 </script>
 
 <style lang="scss" scoped>
-  .base-footer {
+  .base-header {
 
   }
 </style>

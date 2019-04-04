@@ -7,7 +7,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: 'home'
+      // 1. 通过path跳转
+      // redirect: '/home/index'
+      // 2. 通过name属性跳转
+      redirect: { name: 'home' }
+      // 3. 通过方法跳转，动态返回重定向目标
     },
     {
       path: '/home/index',
@@ -33,5 +37,11 @@ export default new Router({
       component: getComponent('shopCart'),
       meta: { title: '购物车' }
     },
+    {
+      path: '*',
+      name: '404',
+      component: () => import(`layouts/notFound`),
+      meta: { title: '404页面' }
+    }
   ]
 });

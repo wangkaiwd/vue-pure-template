@@ -1,17 +1,17 @@
 <template>
-  <div class="base-footer">
-    index
+  <div class="not-found">
+    not-found
   </div>
 </template>
 
 <script>
   export default {
-    name: 'BaseFooter'
+    name: 'NotFound'
   };
 </script>
 
 <style lang="scss" scoped>
-  .base-footer {
+  .not-found {
 
   }
 </style>

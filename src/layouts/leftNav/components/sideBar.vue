@@ -1,33 +1,31 @@
 <template>
   <div class="side-bar-wrapper">
     <template v-for="menu in menuConfig">
-      <el-submenu :index="menu.index" v-if="menu.children">
+      <el-submenu :key="`sub-${menu.path}`" :index="menu.path" v-if="menu.children">
         <template slot="title">
-          {{menu.title}}
+          {{menu.name}}
         </template>
-        <side-bar v-if="menu.children" :menu-config="menu.children"></side-bar>
+        <!--        <side-bar v-if="menu.children" :menu-config="menu.children"></side-bar>-->
       </el-submenu>
-      <el-menu-item :index="menu.index" v-else>
-        {{menu.title}}
+      <el-menu-item :key="`item-${menu.path}`" :index="menu.path" v-else>
+        {{menu.name}}
       </el-menu-item>
     </template>
   </div>
 </template>
 <script>
-  import menuConfig from '../menuConfig';
+  import { menus } from 'router';
 
   export default {
     name: 'SideBar',
     props: {
       menuConfig: {
         type: Array,
-        default: () => menuConfig
+        default: () => menus
       }
     },
     data () {
-      return {
-        // menuConfig
-      };
+      return {};
     }
   };
 </script>

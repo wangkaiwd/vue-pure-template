@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import { fetchGoods } from 'api';
+  // import { fetchGoods } from 'api';
 
   export default {
     name: 'Home',
@@ -14,11 +14,11 @@
       return {};
     },
     mounted () {
-      fetchGoods().then(
-        res => {
-          console.log('res', res);
-        }
-      );
+      // fetchGoods().then(
+      //   res => {
+      //     console.log('res', res);
+      //   }
+      // );
     },
     methods: {}
   };

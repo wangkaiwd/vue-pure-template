@@ -12,10 +12,12 @@ yarn start
 * [`axios`](https://github.com/axios/axios):基于`Promise`的`http`客户端，用于浏览器和`node.js`
 * [`qs`](https://github.com/ljharb/qs):支持解析嵌套的`querystring`。通俗来讲就是可以将以`key1=val1&key2=val2&...`格式的字符串转换为对象格式`{key1:val1,key2:val2,...}` 
 * [`elemente ui`](http://element-cn.eleme.io/#/zh-CN/component/installation):基于`Vue 2.0`的桌面端组件库
+* [`dayjs`](https://github.com/iamkun/dayjs): 一个轻量的日期处理库，用法和`moment.js`类似
+* `vue`+`vuex`+`vue-router`全家桶
 ### 实现功能
 * 自动引入全局`scss`,如`mixins`和`vars`。
-* 分析打包性能:`npm run analyse`
-* 根据命令行参数区分打包环境: `npm run build:test`,`npm run build:pro`
+* 分析打包性能:`npm run build:analyse`
+* 根据命令行参数区分打包环境: `npm run build:test`,`npm run build:pro`,并生成不同的打包目录，方便管理
 * `vue-router`路由懒加载
 * `vuex`模块化处理
 * `axios`接口请求封装以及`api`模块化管理

@@ -1,7 +1,7 @@
 <template>
   <el-col class="left-nav" :span="4">
     <el-menu
-      :default-active="defaultActive"
+      :default-active="$route.path"
       class="left-nav-menu"
       :router="true"
     >
@@ -18,13 +18,8 @@
     components: { SideBar },
     data () {
       return {
-        defaultActive: '/home/index'
+        defaultActive: '/home'
       };
-    },
-    watch: {
-      '$route' (newVal) {
-        this.defaultActive = newVal.path;
-      }
     },
   };
 </script>

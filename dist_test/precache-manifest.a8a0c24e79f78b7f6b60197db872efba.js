@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "/vue-cli3.0-template/dist_test/js/chunk-2d0e19c3.c4a0877e.js"
   },
   {
-    "revision": "9187933cfa77b01e167b",
-    "url": "/vue-cli3.0-template/dist_test/js/app.54c1cb09.js"
+    "revision": "e7f2b956b4c1b25095e1",
+    "url": "/vue-cli3.0-template/dist_test/js/app.e37ba9b5.js"
   },
   {
-    "revision": "a72ef15bde47110b23145f16a5b39ba8",
+    "revision": "81ab747b3b52fb1a3ae23c40e4efb70c",
     "url": "/vue-cli3.0-template/dist_test/index.html"
   },
   {
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/vue-cli3.0-template/dist_test/css/chunk-4153a8c6.68a77357.css"
   },
   {
-    "revision": "9187933cfa77b01e167b",
+    "revision": "e7f2b956b4c1b25095e1",
     "url": "/vue-cli3.0-template/dist_test/css/app.6107d764.css"
   }
 ];

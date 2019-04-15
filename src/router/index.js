@@ -19,21 +19,42 @@ const routes = [
       }
     ]
   },
-  // {
-  //   path: '/goods',
-  //   name: '商品',
-  //   component: lazyLoading('goods'),
-  // },
-  // {
-  //   path: '/personal',
-  //   name: '个人中心',
-  //   component: lazyLoading('personal'),
-  // },
-  // {
-  //   path: '/shopCart',
-  //   name: '购物车',
-  //   component: lazyLoading('shopCart'),
-  // },
+  {
+    path: '/',
+    leaf: true,
+    component: lazyLoading('admin'),
+    children: [
+      {
+        path: '/goods',
+        name: '商品',
+        component: lazyLoading('goods'),
+      },
+    ]
+  },
+  {
+    path: '/',
+    leaf: true,
+    component: lazyLoading('admin'),
+    children: [
+      {
+        path: '/personal',
+        name: '个人中心',
+        component: lazyLoading('personal'),
+      }
+    ]
+  },
+  {
+    path: '/',
+    leaf: true,
+    component: lazyLoading('admin'),
+    children: [
+      {
+        path: '/shopCart',
+        name: '购物车',
+        component: lazyLoading('shopCart'),
+      }
+    ]
+  },
   {
     path: '*',
     hidden: true,

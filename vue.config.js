@@ -1,5 +1,4 @@
 const path = require('path');
-const dayJs = require('dayjs');
 const resolve = dir => path.resolve(__dirname, `src/${dir}/`);
 const argv = process.argv;
 const mode = argv[argv.indexOf('--project-mode') + 1];
@@ -19,7 +18,7 @@ module.exports = {
   },
   // 关闭eslint
   lintOnSave: false,
-  outputDir: `dist_${mode}_${dayJs().format('MM-DD-HH-mm')}`, // 根据打包环境生成不同的打包目录
+  outputDir: `dist_${mode}`, // 根据打包环境生成不同的打包目录
   productionSourceMap: process.env.NODE_ENV === 'development', // 打包时关闭sourceMap
   publicPath: process.env.NODE_ENV === 'development' ? '.' : '/vue-cli3.0-template/',
   chainWebpack: config => {
